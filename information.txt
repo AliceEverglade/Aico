@@ -1,0 +1,23 @@
+import sys
+import os
+import numpy
+import speechrecognition
+import 15.ai ttx3
+import pylance
+import tkinter / pygame / nltk
+
+
+    UI:
+        input for mic selection
+        input for timeout value
+    
+    functionalities:
+        notation
+        finding important words
+        generate Markdown files
+        google on the background
+        general API stuff
+        debug mode?
+        screen recognition
+        coinflip / random number
+        

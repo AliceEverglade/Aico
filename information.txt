@@ -1,10 +1,4 @@
-import sys
-import os
-import numpy
-import speechrecognition
-import 15.ai ttx3
-import pylance
-import tkinter / pygame / nltk
+install whisper from https://github.com/openai/whisper
 
 
     UI:
@@ -12,9 +6,11 @@ import tkinter / pygame / nltk
         input for timeout value
     
     functionalities:
-        notation
-        finding important words
+        recording sound files
+        notation (using whisper.ai)
+        finding important words (algorhithm)
         generate Markdown files
+
         google on the background
         general API stuff
         debug mode?

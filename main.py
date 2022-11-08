@@ -6,7 +6,6 @@ import os
 import numpy
 import pyttsx3
 from pynput. keyboard import Key, Controller
-import keyboard
 import time
 import whisper
 
@@ -45,7 +44,7 @@ while True:
         #print("not understandable")
         pass
     except sr.WaitTimeoutError:
-        print("Wait Timeout Error")
+        #print("Wait Timeout Error")
         pass
     except sr.RequestError as e:
         print(e)

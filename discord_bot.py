@@ -14,6 +14,7 @@ async def send_message(message, user_message, is_private):
 def run_discord_bot():
     tokenFile = open("TOKEN.txt", "r")
     TOKEN = tokenFile.read()
+    #beepo
     client = discord.Client(intents=intents)
     @client.event
     async def on_ready():

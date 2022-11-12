@@ -1,20 +1,19 @@
 import discord
-import bot_responses as responses
+import bot_functions as functions
 
 intents = discord.Intents.default()
 intents.message_content = True
 
 async def send_message(message, user_message, is_private):
     try:
-        response = responses.handle_response(user_message)
-        await message.author.send(response) if is_private else await message.channel.send(response)
+        function = functions.handle_function(user_message)
+        await message.author.send(function) if is_private else await message.channel.send(function)
     except Exception as e:
         print(e)
 
 def run_discord_bot():
     tokenFile = open("TOKEN.txt", "r")
     TOKEN = tokenFile.read()
-    #beepo
     client = discord.Client(intents=intents)
     @client.event
     async def on_ready():

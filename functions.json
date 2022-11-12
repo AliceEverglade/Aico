@@ -1,0 +1,12 @@
+functions = {
+    "google": [{
+        "function": "google()",
+        "keyword": "look up",
+        "keyword": "google",
+        "keyword": "search for",
+    }],
+    "1": [{
+        "function": "playMusic()",
+        "keyword": "play"
+    }]
+}

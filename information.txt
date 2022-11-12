@@ -1,4 +1,5 @@
 install whisper from https://github.com/openai/whisper
+discord developer portal -> Aico
 
 
     UI:

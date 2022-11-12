@@ -12,7 +12,8 @@ async def send_message(message, user_message, is_private):
         print(e)
 
 def run_discord_bot():
-    TOKEN = 'MTA0MTAyNTg0NDI2NjY2ODA4Mg.G4eSnO.TbidjWXEicKwicqOSYVP4oyzb0Edgjtl3FD3Uk'
+    tokenFile = open("TOKEN.txt", "r")
+    TOKEN = tokenFile.read()
     client = discord.Client(intents=intents)
     @client.event
     async def on_ready():

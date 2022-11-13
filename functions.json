@@ -1,12 +1,41 @@
-functions = {
-    "google": [{
-        "function": "google()",
-        "keyword": "look up",
-        "keyword": "google",
-        "keyword": "search for",
-    }],
-    "1": [{
-        "function": "playMusic()",
-        "keyword": "play"
-    }]
+{
+    "google": {
+        "function": "google",
+        "keywords": [
+            "google",
+            "search",
+            "look up"
+        ],
+        "compatible": [{
+            "discordBot": true,
+            "voiceAssistant": true
+        }]
+    },
+    "music": {
+        "function": "play_music",
+        "keywords": [
+            "play"
+        ],
+        "compatible": [{
+            "discordBot": true,
+            "voiceAssistant": true
+        }]
+    },
+    "greet": {
+        "function": "greet",
+        "keywords": [
+            "how are you",
+            "is it going"
+        ],
+        "compatible": [{
+            "discordBot": true,
+            "voiceAssistant": true
+        }]
+    },
+    "roll": {
+        "function": "roll",
+        "keywords": [
+            "roll"
+        ]
+    }
 }

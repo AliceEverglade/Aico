@@ -8,16 +8,20 @@ import pyttsx3
 from pynput. keyboard import Key, Controller
 import time
 import whisper
-import discord_bot as bot
+from discord_bot import run_discord_bot as run_bot
+
 
 discordBotOn = True
 voiceAssistantOn = False
 
+
+#region DiscordBot
 if discordBotOn:
     if __name__ == '__main__':
-        bot.run_discord_bot()
+        run_bot()
+#endregion
 
-
+#region VoiceAssistant
 if voiceAssistantOn:
     # initialisation
     r = sr.Recognizer()
@@ -36,10 +40,6 @@ if voiceAssistantOn:
     print("--------------------------")
     mic = sr.Microphone(device_index=micChoice)
     print("Aico Activated")
-
-    #macro stuff
-    miningMacro = False
-    controls = Controller()
 
 
     # system loop
@@ -74,3 +74,4 @@ if voiceAssistantOn:
 
         #save as markdown file in obsidian vault
         pass
+#endregion

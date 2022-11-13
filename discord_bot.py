@@ -1,19 +1,21 @@
 import discord
-import bot_functions as functions
+from function_handler import handle_function
+from enum import Enum
+from Enums import MessageSource as source
 
 intents = discord.Intents.default()
 intents.message_content = True
 
 async def send_message(message, user_message, is_private):
     try:
-        function = functions.handle_function(user_message)
+        function = handle_function(user_message, source = source.DiscordBot)
         await message.author.send(function) if is_private else await message.channel.send(function)
     except Exception as e:
         print(e)
 
 def run_discord_bot():
-    tokenFile = open("TOKEN.txt", "r")
-    TOKEN = tokenFile.read()
+    with open("TOKEN.txt", "r") as t:
+        TOKEN = t.read()
     client = discord.Client(intents=intents)
     @client.event
     async def on_ready():
@@ -37,3 +39,6 @@ def run_discord_bot():
             await send_message(message, user_message, is_private=False)
         
     client.run(TOKEN)
+
+if __name__ == "__main__":
+    run_discord_bot()
